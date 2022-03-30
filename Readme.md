@@ -2,6 +2,14 @@
 
 
 
+[参考1](https://eonun.com/posts/c9854b1/)
+
+[参考2](https://www.cnblogs.com/devilmaycry812839668/p/15950982.html)
+
+
+
+
+
 
 
 ## 安装
@@ -56,7 +64,7 @@ sudo apt install w3m-img
 ```bash
 sudo apt install libx11-dev libxext-dev   ueberzug  highlight  atool 
 
-sudo apt-get install caca-utils highlight atool w3m  mediainfo  catdoc docx2txt xlsx2csv w3m-img
+sudo apt-get install caca-utils highlight atool w3m  mediainfo  catdoc docx2txt xlsx2csv w3m-img compton  poppler-utils  elinks pdftotext ffmpegthumbnailer
 ```
 
 ## 配置
