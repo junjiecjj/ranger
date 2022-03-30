@@ -82,5 +82,7 @@ ranger --copy-config=all
 
 
 ```bash
+cd  ~/.config/
+
 git clone git@github.com:junjiecjj/ranger.git 
 ```
