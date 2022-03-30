@@ -1,6 +1,66 @@
+# Ranger安装与配置
 
-creating: /Users/test/.config/ranger/rifle.conf    # 指定不同类型的文件的默认打开程序
-creating: /Users/test/.config/ranger/commands.py    # 能通过 : 执行的命令
-creating: /Users/test/.config/ranger/commands_full.py    # 能通过 : 执行的命令，但这个更全
-creating: /Users/test/.config/ranger/rc.conf    # 选项设置和快捷键
-creating: /Users/test/.config/ranger/scope.sh    # 当 use_preview_script = true，这个脚本会被调用
+
+
+
+
+## 安装
+
+
+
+`sudo apt install ranger`
+
+
+
+## 配置
+
+```bash
+ranger --copy-config=all
+```
+
++ creating: /Users/test/.config/ranger/rifle.conf                   # 指定不同类型的文件的默认打开程序
++ creating: /Users/test/.config/ranger/commands.py          # 能通过 : 执行的命令
++ creating: /Users/test/.config/ranger/commands_full.py    # 能通过 : 执行的命令，但这个更全
++ creating: /Users/test/.config/ranger/rc.conf                      # 选项设置和快捷键
++ creating: /Users/test/.config/ranger/scope.sh                   # 当 use_preview_script = true，这个脚本会被调用
+
+## 安装图标
+
+```bash
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+
+echo export RANGER_LOAD_DEFAULT_RC=FALSE >> ~/.zshrc
+source ~/.zshrc
+
+echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
+
+
+# ranger-autojump
+git clone https://github.com/fdw/ranger-autojump.git ~/.config/ranger/plugins/ranger-autojump
+
+cp ~/.config/ranger/plugins/ranger-autojump/autojump.py ~/.config/ranger/plugins
+
+```
+
+
+
+
+
+##  w3m图像预览
+
+```bash
+sudo apt install w3m-img
+
+
+```
+
+
+
+
+
+##  
+
+```
+sudo apt install libx11-dev libxext-dev   ueberzug  highlight  atool 
+```
+

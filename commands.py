@@ -145,7 +145,7 @@ class fzf_select(Command):
             else:
                 self.fm.select_file(fzf_file)
 
-
+#以下命令允许用户将当前目录下选中的文件通过":compress <package name>"命令压缩。它还支持通过当前目录名和为扩展名追加几种可能性来建议名称。
 class compress(Command):
     def execute(self):
         """ Compress marked files to current directory """
@@ -179,7 +179,7 @@ class compress(Command):
             for ext in extension
         ]
 
-
+#下面的命令实现了复制(yy)一个或多个存档文件，然后执行 ":extracthere" 解压到需要的目录。
 class extracthere(Command):
     def execute(self):
         """ Extract copied files to current directory """
@@ -213,7 +213,7 @@ class extracthere(Command):
         self.fm.loader.add(obj)
 
 
-
+#对于使用 7z 的用户, 可以在添加以下命令后, 选中压缩包然后执行 ":extract" 或通过绑定的快捷键来解压
 class extract(Command):
     """:extract <paths>
 
@@ -245,7 +245,7 @@ import os, time
 from ranger.core.loader import Loadable
 from ranger.ext.signals import SignalDispatcher
 from ranger.ext.shell_escape import *
-
+#为了从 ranger 里把镜像挂载到 cdemud 虚拟驱动器, 需要选中镜像文件然后在终端输入 ':mount'。根据你的设置，挂载可能会需要一些时间(我的需要长达一分钟的时间). 以下命令使用自定义的 loader 会等待加载过程结束然后通过后台在第 9 标签打开挂载了的镜像.
 class MountLoader(Loadable, SignalDispatcher):
     """
     Wait until a directory is mounted
