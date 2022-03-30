@@ -41,6 +41,8 @@ git clone https://github.com/fdw/ranger-autojump.git ~/.config/ranger/plugins/ra
 
 cp ~/.config/ranger/plugins/ranger-autojump/autojump.py ~/.config/ranger/plugins
 
+#purify主题
+curl https://raw.githubusercontent.com/kyoz/purify/master/ranger/purify.py --output ~/.config/ranger/colorschemes/default.py
 ```
 
 
